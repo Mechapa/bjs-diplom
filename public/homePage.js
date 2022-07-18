@@ -46,7 +46,7 @@ moneyManager.conversionMoneyCallback = (data) => {
       ProfileWidget.showProfile(response.data);
       moneyManager.setMessage (response.success, "Валюта конвертирована успешно")
     } else {
-      moneyManager.setMessage(response.success, "Ошибка конвертации! " + response.error);
+      moneyManager.setMessage(response.success, "Ошибка конвертации валюты! " + response.error);
     }
   })
 }
@@ -57,7 +57,7 @@ moneyManager.sendMoneyCallback = (data) => {
       ProfileWidget.showProfile(response.data);
       moneyManager.setMessage (response.success, "Валюта успешно переведена")
     } else {
-      moneyManager.setMessage(response.success, "Ошибка перевода! " + response.error);
+      moneyManager.setMessage(response.success, "Ошибка перевода валюты! " + response.error);
     }
   })
 }
